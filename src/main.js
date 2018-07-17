@@ -56,20 +56,24 @@ class App extends React.Component {
     this.setState((previousState) => {
       const firstItems = previousState.firstItems.concat(this.state.first);
       const secondItems = previousState.secondItems.concat(this.state.second);
-      // TODO: change the message property
       return {
         firstItems,
         secondItems,
         first: '',
         second: '',
+        message: this.getIntersection(firstItems, secondItems),
       };
     });
   }
 
-  // TODO: write out the logic to find the common values between your two lists and render that as a comma-separated string that is listed in the cowsay bubble. If there are no common values, the cow's text should remain the defaulted this.state.message. You may have to add a new property to your state or modify another property already provided to you
-
   getIntersection = (firstItems, secondItems) => {
+    const firstItemsDict = firstItems.reduce((accum, current) => {
+      accum[current] = true;
+      return accum;
+    }, {});
 
+    const sharedItems = secondItems.filter(item => firstItemsDict[item]);
+    return sharedItems.length ? sharedItems.join(',') : this.state.message; 
   }
 
   render() {

@@ -5,7 +5,7 @@ export default class Header extends React.Component {
     return (
       // this is called JSX, not tecnically HTML
       <header>
-        <h1>My First React App</h1>
+        <h1>Hey! This Is My First React App!</h1>
       </header>
     );
   }

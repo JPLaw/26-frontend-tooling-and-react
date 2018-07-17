@@ -1,3 +1,3 @@
 # Lab 26: Frontend Tooling and React with Cowsay Browser 
 
-Welcome to my First React App! Here I am using React to render what you put in the fields in to my very own lists. If you type the same thing in each field, my friend Bessie the Cow will let you know by repeating the word. She'll even start a collection of the words that are the same until you refresh the page. Then you get to do it all over again! Huzzah!
+Welcome to my First React App! Here I am using React to render what you put in the fields in to my very own lists. If you type the same thing in each field, my friend Bessie the Cow will let you know by repeating the word. She'll even start a collection of the words that are the same until you refresh the page. Then you get to do it all over again! Enjoy!

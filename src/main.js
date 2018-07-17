@@ -67,11 +67,14 @@ class App extends React.Component {
   }
 
   getIntersection = (firstItems, secondItems) => {
-    const firstListItems = firstItems.reduce((accum, current) => {
-      accum[current] = true;
-      return accum;
-    }, {});
-    // use filter method here?
+    const sameWords = [];
+  
+    for (let i = 0; i < firstItems.length; i++) {
+      for (let j = 0; j < secondItems.length; j++) {
+        if (firstItems[i] === secondItems[j]) sameWords.push(firstItems[i]);
+      }
+    }
+    return sameWords.join(', ');
   };
 
   render() {

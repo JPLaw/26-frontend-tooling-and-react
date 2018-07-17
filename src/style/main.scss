@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+
+$cinzel: 'Cinzel';
+
+body {
+  background-color: #2421d4;
+  font-family: $cinzel;
+  color: #faeb13;
+
+  .cowsay {
+
+    label, button {
+      display: block;
+    }
+
+    ul {
+      display: inline-block;
+    }
+  }
+}

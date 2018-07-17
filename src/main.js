@@ -67,14 +67,12 @@ class App extends React.Component {
   }
 
   getIntersection = (firstItems, secondItems) => {
-    const firstItemsDict = firstItems.reduce((accum, current) => {
+    const firstListItems = firstItems.reduce((accum, current) => {
       accum[current] = true;
       return accum;
     }, {});
-
-    const sharedItems = secondItems.filter(item => firstItemsDict[item]);
-    return sharedItems.length ? sharedItems.join(',') : this.state.message; 
-  }
+    // use filter method here?
+  };
 
   render() {
     return (
